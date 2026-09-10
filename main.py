@@ -7,7 +7,7 @@ from game.entidades.obstaculo.obstaculo import criar_obstaculos
 pygame.init()
 
 # título do jogo
-pygame.display.set_caption("RURAL RUN")
+pygame.display.set_caption("RURAL SURF")
 
 fim_de_jogo = False
 while not fim_de_jogo:
