@@ -1,0 +1,7 @@
+1 - o main vai se tornar um arquivo chamado 'motor' e nele haverá uma função chamada 'run', responsável por rodar o jogo
+2 - criar no readme sessões com imagens, qual problema resolvemos, quais habilidades adquirimos e como pretendemos desenvolver
+3 - o arquivo 'configuracoes', armazena informações como: config de telas, títulos, fontes e imagens
+4 - um arquivo 'render', responsável por exibir e desenhar as telas necessárias
+5 - pasta 'database' onde ficará os db e os arquivos que executam comandos neles
+6 - pasta 'elements', que vai conter todos as classes dos elementos do jogo (personagens, obstáculos, perguntas e power-ups)
+7 - pasta 'util', que vai ficar as ferramentas úteis globalmente no jogo, por exemplo as cores
