@@ -11,10 +11,7 @@ class Obstaculo:
         self.rect = pygame.Rect(x, y, largura, altura)
 
         if Obstaculo._imagem is None:
-            raiz_projeto = Path(__file__).resolve().parents[3]  # sobe 3 níveis
-            caminho_img = raiz_projeto / "src" / "img" / "elementos" / "obstaculos.png"
-
-            imagem = pygame.image.load(str(caminho_img)).convert_alpha()
+            imagem = pygame.image.load('./img/elementos/obstaculos.png').convert_alpha()
             Obstaculo._imagem = pygame.transform.scale(imagem, (largura, altura))
 
         self.imagem = Obstaculo._imagem
