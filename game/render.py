@@ -1,9 +1,6 @@
-def desenhar_inicio_jogo():
-    tela.blit(fundo, (0, 0))
+import pygame
 
-    # desenhando jogador na tela
-    tela.blit(jogador_img, jogador)
+from game.configuracoes import IMG_FUNDOS, LARGURA_TELA, FONTE_PONTOS
 
-    # desenhando os obstáculos na tela
-    for obstaculo in lista_obstaculos:
-        tela.blit(obstaculo_img, obstaculo)
+def desenhar_inicio_jogo(tela, personagem, moedas, obstáculos, fundo, pontos):
+    pass
