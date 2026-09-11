@@ -1,13 +1,21 @@
 import pygame
-from pathlib import Path
+
 
 # configurações da tela
-tamanho_tela = (462, 606)
-largura_tela, altura_tela = tamanho_tela
-tela = pygame.display.set_mode(tamanho_tela)
+LARGURA_TELA = 462
+ALTURA_TELA = 606
 
-raiz_projeto = Path(__file__).resolve().parents[3]  # sobe 3 níveis
-caminho_fundo = raiz_projeto / "src" / "img" / "telas" / "background.png"
+IMG_FUNDOS = [
+    pygame.image.load('./img/telas/fundo-teste.png')
+]
 
-# carrega a imagem de fundo
-fundo = pygame.image.load(caminho_fundo)
+# título do jogo
+TITULO_JOGO = "RURAL SURF"
+
+IMG_PERSONAGENS = [
+    pygame.image.load('./img/personagens/personagem-teste.png')
+]
+
+# mensagens do jogo
+pygame.font.init()
+FONTE_PONTOS = pygame.font.SysFont('arial', 50)
