@@ -2,7 +2,7 @@ import pygame
 
 
 class Personagem:
-    def __init__(self, largura_tela, x=231, y=470, largura=57, altura=114, velocidade=1):
+    def __init__(self, largura_tela, velocidade=1, x=231, y=470, largura=57, altura=114):
         self.largura_tela = largura_tela
         self.largura = largura
         self.altura = altura
