@@ -22,12 +22,12 @@ class Botao:
 def criar_botoes():
     botao_jogar = Botao("botao_jogar.png", centro=(231, 100))
     botao_ranking = Botao("botao_ranking.png", centro=(231, 235))
-    botao_conquistas = Botao("botao_conquistas.png", centro=(231, 370))
+    botao_perfil = Botao("botao_perfil.png", centro=(231, 370))
     botao_sair = Botao("botao_sair.png", centro=(231, 505))
 
     return {
         "jogar": botao_jogar,
         "ranking": botao_ranking,
-        "conquistas": botao_conquistas,
+        "perfil": botao_perfil,
         "sair": botao_sair,
     }
