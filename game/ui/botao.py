@@ -3,7 +3,7 @@ import pygame
 
 class Botao:
     def __init__(self, imagem_inicial, centro, imagem_hover=None):
-        self.imagem = pygame.image.load(imagem_inicial).convert_alpha()
+        self.imagem = pygame.image.load(imagem_inicial)
         self.imagem_hover = pygame.image.load(imagem_hover).convert_alpha() if imagem_hover else self.imagem
         self.rect = self.imagem.get_rect(center=centro)
 

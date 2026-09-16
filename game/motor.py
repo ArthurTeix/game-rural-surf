@@ -29,19 +29,39 @@ class Motor:
             intervalo_ms=1800
         )
 
+        self.estado = "menu"
+
+
     def jogo(self):
         while self.rodando:
             self.watch.tick(self.FPS)
 
             self.capturar_eventos_e_movimento()
-            self.atualizar_obstaculos()
 
-            desenhar_jogo(self.tela, self.personagem, self.gerenciador_obstaculos, self.pontos)
+            if self.estado == "menu":
+                self.tela.fill((50, 150, 200))
+                botao_jogar.desenhar(self.tela)
+                botao_ranking.desenhar(self.tela)
+                botao_perfil.desenhar(self.tela)
+                botao_sair.desenhar(self.tela)
+                pygame.display.update()
+
+            elif self.estado == "jogar":
+                self.atualizar_obstaculos()
+                desenhar_jogo(self.tela, self.personagem, self.gerenciador_obstaculos, self.pontos)
 
     def capturar_eventos_e_movimento(self):
         for evento in pygame.event.get():
             if evento.type == pygame.QUIT:
                 self.encerrar_jogo()
+
+            if evento.type == pygame.MOUSEBUTTONDOWN:
+                if self.estado == "menu" and botao_jogar.clicado(evento.pos):
+                    self.estado = "jogar"
+
+                elif self.estado == "menu" and botao_sair.clicado(evento.pos):
+                    self.rodando = False
+
 
             if evento.type == self.gerenciador_obstaculos.EVENTO_CRIAR_OBSTACULO:
                 self.gerenciador_obstaculos.criar_obstaculo()
