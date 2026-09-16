@@ -20,10 +20,10 @@ class Botao:
         return self.rect.collidepoint(pos_clique)
     
 def criar_botoes():
-    botao_jogar = Botao("botao_jogar.png", centro=(231, 100))
-    botao_ranking = Botao("botao_ranking.png", centro=(231, 235))
-    botao_perfil = Botao("botao_perfil.png", centro=(231, 370))
-    botao_sair = Botao("botao_sair.png", centro=(231, 505))
+    botao_jogar = Botao("./img/botoes/botao_jogar.png", centro=(231, 100))
+    botao_ranking = Botao("./img/botoes/botao_ranking.png", centro=(231, 235))
+    botao_perfil = Botao("./img/botoes/botao_perfil.png", centro=(231, 370))
+    botao_sair = Botao("./img/botoes/botao_sair.png", centro=(231, 505))
 
     return {
         "jogar": botao_jogar,
