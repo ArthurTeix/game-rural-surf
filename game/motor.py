@@ -3,7 +3,7 @@ import pygame
 from game.elements.personagem import Personagem
 from game.elements.obstaculo import GerenciadorObstaculos
 from game.ui.botao import Botao
-from game.render import desenhar_jogo
+from game.render import desenhar_jogo, desenhar_menu
 from game.configuracoes import LARGURA_TELA, ALTURA_TELA, TITULO_JOGO
 from game.ui.botao import botao_jogar, botao_perfil, botao_ranking, botao_sair
 
@@ -39,12 +39,7 @@ class Motor:
             self.capturar_eventos_e_movimento()
 
             if self.estado == "menu":
-                self.tela.fill((50, 150, 200))
-                botao_jogar.desenhar(self.tela)
-                botao_ranking.desenhar(self.tela)
-                botao_perfil.desenhar(self.tela)
-                botao_sair.desenhar(self.tela)
-                pygame.display.update()
+                desenhar_menu(self.tela)
 
             elif self.estado == "jogar":
                 self.atualizar_obstaculos()
