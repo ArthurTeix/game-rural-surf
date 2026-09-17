@@ -1,8 +1,9 @@
+# Arquivo responsável por administrar o funcionamento do jogo
+
 import pygame
 
 from game.elements.personagem import Personagem
 from game.elements.obstaculo import GerenciadorObstaculos
-from game.ui.botao import Botao
 from game.render import desenhar_jogo, desenhar_menu
 from game.configuracoes import LARGURA_TELA, ALTURA_TELA, TITULO_JOGO
 from game.ui.botao import botao_jogar, botao_perfil, botao_ranking, botao_sair

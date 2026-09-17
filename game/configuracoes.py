@@ -1,7 +1,7 @@
 import pygame
 
 
-# configurações da tela
+# tela
 LARGURA_TELA = 462
 ALTURA_TELA = 606
 
@@ -12,6 +12,7 @@ IMG_FUNDOS = [
 # título do jogo
 TITULO_JOGO = "RURAL SURF"
 
+# imagens dos personagens
 IMG_PERSONAGENS = [
     pygame.image.load('./img/personagens/personagem-teste.png')
 ]
